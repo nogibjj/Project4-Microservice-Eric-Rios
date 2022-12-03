@@ -1,4 +1,5 @@
-# Project3-SQL-Eric-Rios-
+# Project4 Microservice : 
+# Eric-Rios
 The objective of this project is to run SQL queries on a database instance created with MYSQL. This instance is created from a videogame sales dataset. 
 
 ## Purpose
