@@ -12,4 +12,7 @@ lint:
 	pylint --disable=R,C --ignore-patterns=test_.*?py *.py dblib
 	#pylint --disable=R,C *.py
 
+deploy:
+	
+
 all: install lint test format deploy
