@@ -9,8 +9,8 @@ format:
 	black *.py mylib/*py 
 
 lint:
-	pylint --disable=R,C --ignore-patterns=test_.*?py *.py dblib
-	#pylint --disable=R,C *.py
+	# pylint --disable=R,C --ignore-patterns=test_.*?py *.py dblib
+	pylint --disable=R,C *.py mylib/*.py
 
 deploy:
 	
