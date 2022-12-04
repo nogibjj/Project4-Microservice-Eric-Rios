@@ -1,13 +1,10 @@
 from digimon.client import DigimonClient
-import pandas as pd
+from digibase import digivolve
 
-df = pd.read_csv('DigiDB_digimonlist.csv')
 
 client = DigimonClient()
 
 
-
-
-
-response = client.get_digimon_by_name("agumon")
-print(response.json())
+def get_digimon(name="agumon"):
+   response = client.get_digimon_by_name(name)
+   return response.json()
