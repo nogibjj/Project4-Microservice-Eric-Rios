@@ -5,20 +5,36 @@ client = DigimonClient()
 
 
 # response = client.get_digimon_by_name(name)
+ls = []
+with open("mylib/DigiDB_digimonlist.txt", "r", encoding="utf8") as f:
 
-with open(r"DigiDB_digimonlist.txt", "r") as f:
+    for line in f:
 
-      for line in f:
-
-        info = line.split(',')
+        info = line.split(",")
         digi_name = info[1]
-        ls.append(digi_name)
+        ls.append(digi_name.lower())
+
 
 def get_digimon(name="agumon"):
 
-    response = client.get_digimon_by_name(name)
+    ls = []
+    
+    with open("mylib/DigiDB_digimonlist.txt", "r", encoding="utf8") as f:
 
-    return print(response.json())
+        for line in f:
+
+            info = line.split(",")
+            digi_name = info[1]
+            ls.append(digi_name.lower())
+
+    if name in ls:
+
+        response = client.get_digimon_by_name(name)
+
+        return response.json()
+    else:
+
+        return "Digimon not found. Make sure you spelled it correctly."
 
 
 # def get_digimon(name="agumon"):

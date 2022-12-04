@@ -3,7 +3,7 @@ install:
 		pip install -r requirements.txt
 
 test:
-	python -m pytest -vv test_*.py
+	python -m pytest -vv --cov=mylib --cov=main test_*.py
 
 format:	
 	black *.py mylib/*py 
@@ -11,6 +11,9 @@ format:
 lint:
 	# pylint --disable=R,C --ignore-patterns=test_.*?py *.py dblib
 	pylint --disable=R,C *.py mylib/*.py
+
+build:
+	docker build -t $(IMAGE_NAME) .
 
 deploy:
 	
