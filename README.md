@@ -1,3 +1,5 @@
+[![Python application test with Github Actions](https://github.com/nogibjj/Project4-Microservice-Eric-Rios/actions/workflows/main.yml/badge.svg)](https://github.com/nogibjj/Project4-Microservice-Eric-Rios/actions/workflows/main.yml)
+
 # Project4 Microservice : 
 # Eric Rios
 The objective of this project is to run SQL queries on a database instance created with MYSQL. This instance is created from a videogame sales dataset. 
