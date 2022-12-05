@@ -33,7 +33,7 @@ async def price(value: str):
     return {"result": result}
 
 
-@app.get("/participants/{name}")
+@app.get("/participants/{value}")
 async def participants(value: str):
 
     """Get random activity according to number of participants inputted"""

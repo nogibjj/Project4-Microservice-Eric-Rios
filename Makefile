@@ -15,7 +15,7 @@ test:
 
 # build:
 # 	#build container
-# 	docker build -t deploy-fastapi .
+	docker build -t deploy-fastapi .
 
 # run:
 # 	#run docker
