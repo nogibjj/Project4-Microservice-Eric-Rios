@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 import uvicorn
-from mylib.logic import get_digimon
+from dblib.other_logic import get_digimon
 
 app = FastAPI()
 

@@ -1,62 +1,26 @@
-from digimon.client import DigimonClient
+import requests
 
+def get_random_activity():
+    """Get random activity from the Bored API"""
+    url = "https://www.boredapi.com/api/activity/"
+    response = requests.get(url)
+    return response.json()
 
-client = DigimonClient()
-
-
-# response = client.get_digimon_by_name(name)
-ls = []
-with open("mylib/DigiDB_digimonlist.txt", "r", encoding="utf8") as f:
-
-    for line in f:
-
-        info = line.split(",")
-        digi_name = info[1]
-        ls.append(digi_name.lower())
-
-
-def get_digimon(name="agumon"):
-
-    ls = []
+def get_activity_by_type(value):
+    """Get random activity according to type inputted"""
+    if value not in ["education", "recreational", "social", "diy", "charity", "cooking", "relaxation", "music", "busywork"]:
+        
+        return "No activity found with that type. Your options are education, recreational, social, diy, charity, cooking, relaxation, music, and busywork. Put your suggestion in quotes." 
     
-    with open("mylib/DigiDB_digimonlist.txt", "r", encoding="utf8") as f:
+    response = requests.get(f"https://www.boredapi.com/api/activity?type={value}")
 
-        for line in f:
+    return response.json()
 
-            info = line.split(",")
-            digi_name = info[1]
-            ls.append(digi_name.lower())
+def get_activity_by_participant_count(value):
+    """Get random activity according to number of participants inputted"""
+    if value not in ["1", "2", "3", "4", "5"]:
+        return "No activity found with that number of participants. Your options are 1-5. Put your suggestion in quotes."
 
-    if name in ls:
+    response = requests.get(f"https://www.boredapi.com/api/activity?participants={value}")
 
-        response = client.get_digimon_by_name(name)
-
-        return response.json()
-    else:
-
-        return "Digimon not found. Make sure you spelled it correctly."
-
-
-# def get_digimon(name="agumon"):
-#    """Get a digimon by name."""
-
-#    client = DigimonClient()
-
-#    ls = []
-
-#    with open(r"/workspaces/Project4-Microservice-Eric-Rios/DigiDB_digimonlist.txt", "r") as f:
-
-#       for line in f:
-
-#         info = line.split(',')
-#         digi_name = info[1]
-#         ls.append(digi_name)
-
-#    if name.lower() in ls:
-
-#       response = client.get_digimon_by_name(name)
-#       return response.json()
-
-#    else:
-
-#       return "Name was not typed correctly."
+    return response.json()
