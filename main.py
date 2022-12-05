@@ -9,11 +9,13 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Bored API.  Get your random activity by calling /type, /price  or /participants ."}
+    return {
+        "message": "Bored API.  Get your random activity by calling /types, /price  or /participants ."
+    }
 
 
-@app.get("/type/{value}")
-async def type(value: str):
+@app.get("/types/{value}")
+async def types(value: str):
     """Get random activity according to type inputted"""
 
     result = get_activity_by_type(value)
@@ -33,54 +35,13 @@ async def price(value: str):
 
 @app.get("/participants/{name}")
 async def participants(value: str):
-    
+
     """Get random activity according to number of participants inputted"""
 
     result = get_activity_by_participant_count(value)
 
     return {"result": result}
 
-
-if __name__ == "__main__":
-    uvicorn.run(app, port=8080, host="0.0.0.0")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-app = FastAPI()
-
-print(get_digimon().json())
-
-
-@app.get("/")
-async def root():
-    return {"message": "Digimon API.  Call /get_digimon and type a lowercase name to get a digimon."}
-
-
-@app.get("/get_digimon/{value}")
-async def search(value: str):
-    """Digimon info to return for the name inputted"""
-
-    return {"result": get_digimon(value).json()}
 
 if __name__ == "__main__":
     uvicorn.run(app, port=8080, host="0.0.0.0")
