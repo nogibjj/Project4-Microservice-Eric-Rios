@@ -27,4 +27,4 @@ run:
 	docker tag activity_to_cure_boredom:latest 667719398048.dkr.ecr.us-east-1.amazonaws.com/activity_to_cure_boredom:latest
 	docker push 667719398048.dkr.ecr.us-east-1.amazonaws.com/activity_to_cure_boredom:latest
 
-all: install lint test format #deploy
+all: install format lint test deploy
