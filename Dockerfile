@@ -30,7 +30,8 @@
 # [Optional] Uncomment this line to install global node packages.
 # RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g <your-package-here>" 2>&1
 
-FROM python:3.10.8-slim-bullseye
+# FROM python:3.10.8-slim-bullseye
+FROM public.ecr.aws/lambda/python:3.8
 
 RUN mkdir -p /app
 COPY . main.py /app/
