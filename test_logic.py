@@ -28,3 +28,7 @@ def test_price():
     result = get_activity_by_price("0.1")
 
     assert result["price"] == 0.1
+
+test_participant()
+test_type()
+test_price()
