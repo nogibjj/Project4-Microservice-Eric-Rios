@@ -1,4 +1,4 @@
-[![Python application test with Github Actions](https://github.com/nogibjj/Project4-Microservice-Eric-Rios/actions/workflows/main.yml/badge.svg)](https://github.com/nogibjj/Project4-Microservice-Eric-Rios/actions/workflows/main.yml)
+[![Python application test with Github Actions](https://github.com/nogibjj/Project4-Microservice-Eric-Rios/actions/workflows/main.yml/badge.svg)](https://github.com/nogibjj/Project4-Microservice-Eric-Rios/actions/workflows/main.yml) (https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiZlVPRFpCUDNtS0l1UFVMaVFPTWloWDN0WEw0bzUvVE1BSWhQa0Q4OGYzRzc0MWRocTJUemNoU2RhbjhQQmxOOUovSFZHcXJXYVFuZFN5cGE0eFFVa3dzPSIsIml2UGFyYW1ldGVyU3BlYyI6ImQ2aG9odUpCV2M1dDB5ajkiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=main)
 
 # Activities to Cure Boredom by Eric Rios : A Microservice Hosted on AWS
 
