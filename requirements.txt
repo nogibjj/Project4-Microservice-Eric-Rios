@@ -2,7 +2,7 @@ anyio==3.6.2
 astroid==2.12.13
 attrs==22.1.0
 aws==0.2.5
-awscliv2==2.2.0
+awscli==1.27.23
 bcrypt==4.0.1
 beautifulsoup4==4.11.1
 black==22.10.0
