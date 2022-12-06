@@ -1,6 +1,6 @@
 [![Python application test with Github Actions](https://github.com/nogibjj/Project4-Microservice-Eric-Rios/actions/workflows/main.yml/badge.svg)](https://github.com/nogibjj/Project4-Microservice-Eric-Rios/actions/workflows/main.yml)
 
-# Project4 Microservice Hosted on AWS : Activities to Cure Boredom by Eric Rios
+# Activities to Cure Boredom by Eric Rios : A Microservice Hosted on AWS
 
 ## Overview
 
