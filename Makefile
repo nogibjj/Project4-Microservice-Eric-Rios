@@ -18,11 +18,11 @@ build:
 
 run:
 	#run docker
-	docker run -p 127.0.0.1:8080:8080 fc1e0160ec3c
+	docker run -p 127.0.0.1:8080:8080 5ef41dd238a1
 
 deploy:
  	#deploy
-	awsv2 ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 667719398048.dkr.ecr.us-east-1.amazonaws.com
+	aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 667719398048.dkr.ecr.us-east-1.amazonaws.com
 	docker build -t activity_to_cure_boredom .
 	docker tag activity_to_cure_boredom:latest 667719398048.dkr.ecr.us-east-1.amazonaws.com/activity_to_cure_boredom:latest
 	docker push 667719398048.dkr.ecr.us-east-1.amazonaws.com/activity_to_cure_boredom:latest
