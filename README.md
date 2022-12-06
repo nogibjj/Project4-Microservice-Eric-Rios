@@ -2,7 +2,9 @@
 
 # Project4 Microservice : 
 # Eric Rios
-The objective of this project is to run SQL queries on a database instance created with MYSQL. This instance is created from a videogame sales dataset. 
+The objective of this project is to deploy
+
+n SQL queries on a database instance created with MYSQL. This instance is created from a videogame sales dataset. 
 
 ## Purpose
 The industry players compete aggresively every year to sell the most titles. It would be ideal to query the best selling games historically by platform. It could be a useful way to identify potential remasters and continue to increase lifetime sales. For example, many re-releases have been taking place on the pc platform, and many of those releases are retro or legacy games, such as the Monkey Island series or the Persona series. The other purpose of this project is to develop SQL querying experience. 
