@@ -75,3 +75,6 @@ jobs:
     - name: Build Container
       run: |
         make build
+    - name: Deploy Container
+      run: |
+        make deploy

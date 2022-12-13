@@ -26,6 +26,8 @@ A docker image was built to containerize the app. Then it was sent to an AWS ECR
 
 ### Results:
 
+Link to app: https://fpismmeupd.us-east-1.awsapprunner.com/docs
+
 ![image](https://user-images.githubusercontent.com/70504872/205870064-13e32c0e-fd51-443b-9adc-e080edbb2f56.png)
 
 
