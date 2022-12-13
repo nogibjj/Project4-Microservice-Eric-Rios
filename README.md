@@ -22,12 +22,15 @@ The main python file called upon the functions derived in the logic.py file. The
 
 ### Continuous Delivery
 
-A docker image was built to containerize the app. Then it was sent to an AWS ECR repository. From there, it gets built through AWS Code Build. It is important to also flag that the AWS account's owner must add the AmazonEC2ContainerRegistryFullAccess to the permissions under the policy that manipulates or oversees that repository. Otherwise, the build won't complete. Once built, the app is deployed through AWS AppRunner, and it becomes immediately available to anyone. 
+A docker image was built to containerize the app. Then it was sent to an AWS ECR repository. From there, it gets built through AWS Code Build. It is important to also flag that the AWS account's owner must add the AmazonEC2ContainerRegistryFullAccess to the permissions under the policy that manipulates or oversees that repository. Otherwise, the build won't complete. Once built, the app is deployed through AWS AppRunner, and it becomes immediately available to anyone. Something else that affects the permissions is creating a codebuild with elevated build privileges, a good way to avoid the "are the docker daemons running" error.
 
 ### Results:
 
-Link to app: https://fpismmeupd.us-east-1.awsapprunner.com/docs
+Link to app: https://ijtqmzv63p.us-east-1.awsapprunner.com/docs
 
 ![image](https://user-images.githubusercontent.com/70504872/205870064-13e32c0e-fd51-443b-9adc-e080edbb2f56.png)
 
 
+### Update December 13, 2022: 
+
+I had an issue with aws credentials, where I forgot and changed my access keys because I needed them for another project. The apprunner link changed now. It all works.
